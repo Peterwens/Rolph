@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Menu</title>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="menu.css">
+<ul>
+<li><a>Etudiant</a>
+<ul>
+<li><a href="EregistrerEtudiantprof.html" type="text">Enregistrer</a></li>
+<li><a href="trecherchetudprof.html" type="text">Rechercher</a></li>
+<li><a  href="modifieretudiantprof.html" type="text">Modifier</a></li>
+<li><a href="listeretudiant2.html" type="text">Afficher</a></li>
+</ul>
+</li>
+<li><a>Professeur</a>
+<ul>
+<li><a  href="EregistrerProf.html" type="text">Enregistrer</a></li>
+<li><a  href="trechercheprof.html" type="text">Rechercher</a></li>
+<li><a  href="modifierprof.html" type="text">Modifier</a></li>
+<li><a href="listerprof.html" type="text">Afficher</a></li>
+</ul>
+</li>
+<li><a  href="page d'accueil.html" type="text">Accueil</a>
+
+</li>
+</br></br>
+<div class="form">
+<h1>Bienvenue  dans la base de donnees</br> cher Coordonateur</h1>
+</div>
+
+
+</body>
+</html>
