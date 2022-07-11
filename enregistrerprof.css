@@ -1,0 +1,107 @@
+body{
+background-image:url(image/teacher.jpg) ;
+padding:0px;
+margin:10px;
+background-size:100%;
+background-repeat: no repeat;
+}
+
+a[type="text"]:hover{
+background:#2cee71;
+border-radius:34px;
+
+}
+a[type="text"]{
+margin:10px auto;
+padding:1px 10px;
+transition:0.25s;
+cursor:pointer;
+color:white;
+background:blue;
+border-radius:34px;
+border:2px solid ;
+text-align:center;
+
+}
+
+.boxfoto input[type="submit"]:hover{
+background:#2cee71;
+border-radius:34px;
+
+}
+.boxfoto input[type="submit"]{
+margin:10px auto;
+padding:1px 10px;
+transition:0.25s;
+cursor:pointer;
+color:black;
+background:white;
+border-radius:34px;
+border:2px solid #2cee71;
+text-align:center;
+
+}
+
+.box{
+background:transparent;
+border-radius:20px;
+}
+.form{
+position:absolute;
+padding:40px;
+width:600px;
+top:40%;
+left:60%;
+transform:translate(-70%,-30%);
+text-align:center;
+border:1px solid black;
+margin:auto;
+background-color:rgb(0,0,0,0,5);
+font-size:20px;
+color:white;
+}
+.corps1{
+position:absolute;
+padding:40px;
+width:600px;
+top:40%;
+left:60%;
+transform:translate(-70%,-30%);
+text-align:center;
+border:1px solid black;
+margin:auto;
+background-color:rgb(0,0,0,0,5);
+font-size:20px;
+}
+.regform{
+width:500px;
+background-color:rgb(0,0,0,0,6);
+margin:auto;
+color:black;
+padding:10px 0x 10px 0px;
+text-align:center;
+border-radius:15px 15px 0px 0px;	
+size:12px;
+
+}
+img{
+width:50px;
+border-radius:34px;
+}
+hr{
+border:3px #2cee71 double
+}
+.boxfoto{
+position:absolute;
+padding:40px;
+width:300px;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+
+}
+.boxfoto td{
+size:30px;
+
+}
