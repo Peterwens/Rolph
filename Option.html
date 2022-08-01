@@ -1,0 +1,993 @@
+<?php
+
+$con=mysqli_connect("localhost","root","") or die("ERREUR");
+mysqli_select_db($con,"dbunasmoh") or die("IMPOSSIBLE");
+if(isset($_POST['btnconecter'])){
+$cod=$_POST['code'];
+$sql2="select * from user where code='$cod'";
+$req=mysqli_query($con,$sql2);
+while($val=mysqli_fetch_Array($req)){
+$email=$val['code'];
+if($val['fonction']=='Secretaire'){
+	
+header('location:gestionetudiant2.html');
+}else if($val['fonction']=='Etudiant' and $val['Faculte']=='Genie Civile' ){
+header('location:profilgenie1an.html');
+}else if($val['fonction']=='Etudiant' and $val['Faculte']=='SCience informatique'){
+header('location:profilscinfo1an.html');
+}else if($val['fonction']=='Etudiant' and $val['Faculte']=='Developpement'){
+header('location:adminscdev.html');
+}else if($val['fonction']=='Etudiant' and $val['Faculte']=='Science infirmieres'){
+header('location:profilscinf1an.html');
+}else if($val['fonction']=='Etudiant' and $val['Faculte']=='Science education'){
+header('location:profilscedu1an.html');
+
+
+}else if($val['fonction']=='Etudiant' and $val['Faculte']=='Science juridique'){
+header('location:profilscjuri1an.html');
+}else if($val['fonction']=='Etudiant' and $val['Faculte']=='laboratoire medicale'){
+header('location:profillabo1an.html');
+}else if($val['fonction']=='Etudiant' and $val['Faculte']=='Ecole normal'){
+header('location:profilens1an.html');
+
+}else if($val['fonction']=='Etudiant' and $val['Faculte']=='Electromeca'){
+header('location:profilEElectro1an.html');
+}else if($val['fonction']=='Etudiant' and $val['Faculte']=='Science Administratives'){
+header('location:profilscadm1an.html');
+}else if($val['fonction']=='Etudiant' and $val['Faculte']=='Comptables'){
+header('location:profileComptable.html');
+}else if($val['fonction']=='Etudiant' and $val['Faculte']=='Gestion'){
+header('location:profileGestion.html');
+}else if($val['fonction']=='Etudiant' and $val['Faculte']=='Economie'){
+header('location:profilEEconomie.html');
+}else if($val['fonction']=='Etudiant' and $val['Faculte']=='Education scs soc/Econ'){
+header('location:profilscedu1an.html');
+}else if($val['fonction']=='Etudiant' and $val['Faculte']=='Agronomie'){
+header('location:profilagro1an.html');
+
+
+
+
+
+
+}else if($val['fonction']=='Etudiant' and $val['Faculte']=='ENS-Maths/Physiques(NS-SMP)'){
+header('location:profilens1an.html');
+}else if($val['fonction']=='Etudiant' and $val['Faculte']=='ENS-Nat./Chimie(NS-SVT)'){
+header('location:adminagro.html');
+}
+
+
+
+else{
+$va=$val['fonction'];
+echo"".$va;
+
+}
+} 
+}
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Unasmoh</title>
+    <!-- META TAGS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Education master is one of the best educational html template, it's suitable for all education websites like university,college,school,online education,tution center,distance education,computer education">
+    <meta name="keyword" content="education html template, university template, college template, school template, online education template, tution center template">
+    <!--  ICON PRINCIPALE-->
+<link rel="shortcut icon" href="images/UnasLogo.jfif" type="">
+    <!-- FONT ENTETE GOOGLE -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700%7CJosefin+Sans:600,700" rel="stylesheet">
+ <!--  Gestion de couleur de l’icône majeur - PDD -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Fichiers CSS -->
+    <link href="css/materialize.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- RESPONSIVE.CSS faisant la gestion des mobiles et tablettes  -->
+    <link href="css/style-mob.css" rel="stylesheet" />
+    
+</head>
+
+<body>
+
+   
+
+    <!--SECTION ENTETE-->
+ <section>
+        <div class="ed-mob-menu">
+            <div class="ed-mob-menu-con">
+                <div class="ed-mm-left">
+                    <div class="wed-logo">
+                        <a href="index.html"><img src="images/UnasLogo - Copy.jfif"  alt="" style="max-height:220%; max-width:220%;"/>
+						</a>
+                    </div>
+                </div>
+                <div class="ed-mm-right">
+                    <div class="ed-mm-menu">
+                        <a href="#!" class="ed-micon"><i class="fa fa-bars"></i></a>
+                        <div class="ed-mm-inn">
+                            <a href="#!" class="ed-mi-close"><i class="fa fa-times"></i></a>
+                            
+                            <h4><b><u>MENU</u></b></h4>
+							</br>
+                            <ul>
+                               <ul><a href="index.html"><b>Accueil</b></a></ul>
+                                <ul><a href=""><b>A propos de</b></a>
+								<li><a href="historicite.html">Historicité</a></li>
+								<li><a href="mission.html">Mission</a></li>
+								<li><a href="organisation.html">Organisation</a></li>
+								<li><a href="organisationb.html">Mot du président</a></li> </ul>
+								<li><a href="campus.html">Campus</a></li> </ul>
+								
+								
+                                <ul><a href="inscription.html"><b>Admission</b></a></ul>
+                                <ul><a href="Option.html"><b>Facultés</b></a></ul>
+                                <ul><a href="sport.html"><b>Sport</b></a></ul>
+                                <ul><a href="events.html"><b>Actualité</b></a></ul>
+                                <ul><a href="contact.html"><b>Contactez-nous</b></a></ul>
+								<hr/>
+                                <ul><a href="#!" data-toggle="modal" data-target="#modal1"><b>Se connecter</b></a></ul>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--SECTION ENTETE-->
+    <section>
+        <!-- TOP BARRE/  -->
+      <div class="ed-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="ed-com-t1-left">
+                            <ul>
+                                <li><a href="contact.html">Adresse: # 4,Rue Marcelin,Delmas65 / 16 ,Avenue Christophe Rue 4</a>
+                                <a >Phone:+(509) 3664-0716 / 3622-3235 / 40132239</a>
+								</li>
+                            </ul>
+                        </div>
+                        <div class="ed-com-t1-right">
+                            <ul>
+                                <!-- TOP BARRE A DROITE  -->
+                                <li><a href="#!" data-toggle="modal" data-target="#modal1">S'identifier</a>
+                                </li>
+								
+                            </ul>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- LOGO ET MENU SECTION -->
+       <div class="top-logo" data-spy="affix" data-offset-top="250">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wed-logo">
+						
+                            <a href="index.html"><img  style = "width:52%; padding-top:3%;"  src="images/UnasLogo.jfif" alt="" />
+							  
+                            </a>
+                        </div>
+                        <div class="main-menu">
+                            <ul class="navigation">
+							 <!-- MENU1/MENU PRINCIPAL -->
+                                <li><a href="index.html">ACCUEIL</a><span>|</span>
+                                </li>
+                                <li class="about-menu">
+                                    <a class="mm-arr" href="#">A PROPOS DE</a><span>|</span>
+                                    <!-- MENU1/MENU PRINCIPAL -->
+                                    <div class="mm-pos">
+                                        <div class="about-mm m-menu">
+                                            <div class="m-menu-inn">
+                                                <div class="mm1-com mm1-s1">
+                                                    <div class="ed-Course-in">
+                                                        <a class="Course-overlay menu-about" href="inscription.html">
+                                                            <img src="images/slider/new.jpg" alt="">
+                                                            <!-- <span>Academique</span> -->
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="mm1-com mm1-s2">
+                                                    <p>L'Unasmoh est l'une des plus grandes université du pays. Avec le plus grand nombres d'étudiants et le plus de succursale dans tout le pays. Donc veuillez nous réjoindre.</p>
+                                                   
+                                                </div>
+												<!-- MENU1/MENU PRINCIPAL/ANNDAN ABOUT US -->
+                                                <div class="mm1-com mm1-s3">
+                                                    <ul>
+                                                       
+                                                    
+														  <li><a href="historicite.html">Historicité</a></li>
+														<li><a href="mission.html">Mission</a></li>
+														<li><a href="organisation.html">Organisation</a></li>
+														<li><a href="organisationb.html">Mot du président</a></li>
+														<li><a href="campus.html">Campus</a></li>
+														
+                                                    </ul>
+                                                </div>
+                                               
+											   
+											         <div class="mm1-com mm1-s3">
+														<p><b><h4>S'ouvrir </br> a </br>votre savoir</h4></b></p>
+                                                </div>
+											   
+											   
+											   
+											   
+											   
+											   
+											   
+											   
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="admi-menu">
+								<!--MENU1/MENU PRINCIPAL -->
+                                    <a href="inscription.html" class="mm-arr">ADMISSION</a><span>|</span>
+                                    
+								<!-- MENU1/MENU PRINCIPAL -->
+                                <li class="EnCours"><a href="Option.html"  >FACULTÉS</a><span>|</span></li>
+								
+                                         
+
+						
+								<li class='menu-aboutSport'>
+								
+							<a href="sport.html" class="mm-arrSport">SPORT</a><span>|</span>
+							
+							<div class='king m-Menuport'>
+							 <div class="m-menu-inn">
+							  <div class="mm1Sport-com mm1Sport-s3">
+							 
+                                                
+													
+                                                </div>
+					
+										</div>
+										 </div>
+										
+                                 </li>
+									<!-- MENU1/MENU PRINCIPAL -->
+                                <li><a href="events.html">ACTUALITÉS</a><span>|</span>
+                                </li>
+								 <li><a href="contact.html">CONTACTEZ-NOUS</a>
+                                </li>
+					
+                             
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="all-drop-down-menu">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+		<!-- BARRE de recherche principale -->
+		<div class="search-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="search-form">
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="head-2">
+            <div class="container">
+                <div class="head-2-inn">
+                    <h1>Facultés et Cours</h1>
+                    <p>Présentation des facultés et de leurs cursus .</p>
+                    <div class="event-head-sub">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--DEBUT SECTION -->
+    <section>
+        <div class="container com-sp pad-bot-70">
+            <div class="row">
+                <div class="cor about-sp">
+                    <div class="s18-age-event l-info-pack-days">
+                        <ul>
+                            
+                          
+                          
+                              <li>
+                                <div class="age-eve-com age-eve-1">
+                                    <img src="images/icon/awa/2.png" alt="">
+                                </div>
+                                <div class="s17-eve-time">
+                                    <div class="s17-eve-time-tim">
+                                        
+                                    </div>
+                                    <div class="s17-eve-time-msg">
+                                            <h4>FASED (Faculté des Sciences de l'Education)</h4>
+										</br>
+										
+                                        <div class="time-hide time-hide-1">
+										<h5><u>Options</u></h5>
+										</br>
+                                       <h5> 1)  philosophie et Lettres.</p></h5>
+											<p style="text-align:justify"> 
+											Le diplôme en sciences de l'éducation avec concentration en Philosophie et en Lettres permet 
+											aux étudiants d'acquérir des connaissances qui les familiarisent avec les différentes facettes
+											du monde scolaire, de l’enseignement et de la didactique de la philosophie et des lettres. 
+											Cette formation basée sur l’approche par compétence permet d'aiguiser sens critique de
+											l’apprenant pour mieux comprendre les différents phénomènes qui touchent le secteur 
+											de l'éducation, ce qui fait de nos diplômés des enseignants compétents.
+											Ils sont outillés pour aider les jeunes à s'épanouir par l'apprentissage
+											de la philosophie et des lettres. Au cours cette licence, les étudiants 
+											acquièrent une solide formation tant dans le champ de l'histoire de 
+											la philosophie que dans les différentes disciplines du savoir philosophique 
+											(éthique, philosophie politique, épistémologie, logique, etc.), tout en leur
+											permettant de de découvrir les principaux développements contemporains de la 
+											philosophie. La formation proposée pour les lettres conduit à des métiers très divers 
+											tels l’enseignement, le journalisme, la fonction publique, les concours administratifs, 
+											et de manière générale à des métiers qui
+											exigent une parfaite maîtrise des langues créole et française avec de grandes qualités rédactionnelles.
+											</p></h5>
+											
+											
+											<h5>Télécharger cursus</h5>
+											<a href="Cursus/UnasmohCursusPhilosophie.pdf" download="UnasmohCursusPhilosophie.pdf" style="color:blue;" style="background-color:white" class="badge badge-primary badge-pill">Telecharger cursus</a>
+											
+											</br>
+											</br>
+                                       <h5> 2)  Math-Physique.</p></h5>
+											<p style="text-align:justify"> 
+											Le diplôme en sciences de l'éducation avec concentration dans les sciences mathématiques et physiques 
+											permettant aux étudiants d'acquérir des connaissances afin de les familiariser avec les différentes facettes
+											du monde scolaire, de l’enseignement et de la didactique des sciences mathématiques et physiques. Il est offert à l’étudiant la possibilité d'analyser n’importe quel système éducatif pour mieux réfléchir et appréhender ses liens avec la science et les réalités socioéconomiques. Une formation basée sur l’approche par compétence qui permet d'aiguiser le sens critique de l’apprenant pour mieux comprendre les différents phénomènes qui touchent le secteur de l'éducation, ce qui fait de nos diplômés des enseignants compétents. Ces derniers sont capables, notamment, de communiquer clairement à l'oral et à l'écrit, de transmettre leurs connaissances, de s'adapter aux situations d'enseignement et d'apprentissage, de planifier et d'organiser des cours de même que de superviser un groupe d'élèves. 
+											Ils sont outillés pour aider les jeunes à s'épanouir par l'apprentissage des mathématiques et de la physique.
+											</p></h5>
+											
+											
+											<h5>Télécharger cursus</h5>
+											<a href="Cursus/UnasmohCursusMathPhysiques.pdf" download="UnasmohCursusMathPhysiques.pdf" style="color:blue;" style="background-color:white" class="badge badge-primary badge-pill">Telecharger cursus</a>
+											
+											
+                                        </div>
+                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-1-btn">
+										<i class="fa fa-angle-down"></i>
+									</a>
+                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-11-btn hb-com">
+										<i class="fa fa-angle-up"></i>
+									</a>
+                                    </div>
+                                </div>
+                            </li>
+							
+							
+							  <li>
+                                <div class="age-eve-com age-eve-1">
+                                    <img src="images/icon/awa/2.png" alt="">
+                                </div>
+                                <div class="s17-eve-time">
+                                    <div class="s17-eve-time-tim">
+                                        
+                                    </div>
+                                    <div class="s17-eve-time-msg">
+                                      <h4>FSAE (Faculté des Sciences Administratives et Economiques)</h4>
+										</br>
+										
+                                        <div class="time-hide time-hide-1">
+										<h5><u>Options</u></h5>
+										</br>
+                                       <h5> 1)  Sciences Comptables </p></h5>
+											<p style="text-align:justify"> 
+										Le programme de licence en comptabilité vise à développer les habiletés nécessaires à la pratique de la 
+										profession comptable. Les cours offerts couvrent les notions suivantes : concepts et méthodes en 
+										comptabilité et information financière, comptabilité et contrôle de gestion, gouvernance, finance, 
+										certification et fiscalité. Comme stratégies pédagogiques, l’UNASMOH privilégie la mise en situation 
+										des étudiants par des analyses de cas, des travaux pratiques et des simulations. Nos diplômés se sont
+										toujours distingués comme de véritables spécialistes par leurs capacités à résoudre les problèmes les 
+										plus embarrassants, leur jugement professionnel, leur comportement éthique,
+										la qualité de leurs rapports à valeur ajoutée, la communication efficace, la gestion d’équipe et le
+										leadership.
+											</p></h5>
+											
+											
+											<h5>Télécharger cursus</h5>
+											<a href="Cursus/Economiques.pdf" download="Economiques.pdf" style="color:blue;" style="background-color:white" class="badge badge-primary badge-pill">Telecharger cursus</a>
+											</br>
+											</br>
+                                       <h5> 2) Sciences de la Gestion  </p></h5>
+											<p style="text-align:justify"> 
+										Le programme de licence en gestion à l’UNASMOH vise à doter l’étudiant des compétences lui permettant
+										de comprendre les notions fondamentales des sciences du management et de les appliquer, dans le respect
+										des principes d’éthique et de responsabilité sociale, aux différentes fonctions d’une structure 
+										organisationnelle. Cette formation entend également développer chez l’apprenant les habilités 
+										essentielles pour exercer un rôle de leader à tous les niveaux d’une organisation tant dans 
+										ses rapports avec les structures internes qu’externes tout en tenant compte de la place à accorder aux TIC.
+											</p></h5>
+											
+											
+											<h5>Télécharger cursus</h5>
+											<a href="Cursus/UnasmohCursusGestion.pdf" download="UnasmohCursusGestion.pdf" style="color:blue;" style="background-color:white" class="badge badge-primary badge-pill">Telecharger cursus</a>
+											
+											</br>
+												</br>
+                                       <h5> 3) Sciences Economiques </p></h5>
+											<p style="text-align:justify"> 
+										Ce programme de licence à l’UNASMOH offre une formation permettant à l’étudiant d’acquérir les compétences 
+										nécessaires pour analyser de façon éclairée et systématique les questions de politique publique très diverses, 
+										comme l'évolution de la conjoncture économique, l'incidence des choix budgétaires du gouvernement sur le chômage,
+										l'inflation et le bien-être des populations, l'efficacité relative de différentes politiques environnementales, les implications des changements démographiques à venir, l'analyse de l'aide internationale au pays, l'incidence des différentes 
+										politiques de gestion des ressources naturelles ou les effets des différentes politiques d’assistance et de sécurité sociales.
+											</p></h5>
+											
+											
+											<h5>Télécharger cursus</h5>
+											<a href="Cursus/Economiques.pdf" download="Economiques.pdf" style="color:blue;" style="background-color:white" class="badge badge-primary badge-pill">Telecharger cursus</a>
+											
+											
+											
+                                        </div>
+                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-1-btn">
+										<i class="fa fa-angle-down"></i>
+									</a>
+                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-11-btn hb-com">
+										<i class="fa fa-angle-up"></i>
+									</a>
+                                    </div>
+                                </div>
+                            </li>
+							
+							
+							
+							  <li>
+                                <div class="age-eve-com age-eve-1">
+                                    <img src="images/icon/awa/2.png" alt="">
+                                </div>
+                                <div class="s17-eve-time">
+                                    <div class="s17-eve-time-tim">
+                                        
+                                    </div>
+                                    <div class="s17-eve-time-msg">
+                                        <h4>FADRI (Faculté de Droit et des Relations Internationales)</h4>
+										</br>
+										
+                                        <div class="time-hide time-hide-1">
+										<h5><u>Option</u></h5>
+										</br>
+                                       <h5> 1)  Sciences Juridiques.</p></h5>
+											<p style="text-align:justify"> 
+											Le programme de licence en Sciences juridiques à l’UNASMOH immerge l’étudiant dans l'univers du droit 
+											et le prépare à y jouer un rôle crucial en tant qu'avocat, notaire, conseiller juridique ou magistrat. 
+											À la fin de cette formation, le diplôme fournit d’importants outils pour effectuer d'efficaces raisonnements 
+											juridiques, mener des fines analyses, réaliser des recherches, produire des documents juridiques étoffés et 
+											résoudre des problèmes complexes. Le contenu du cours couvre tant pour le droit privé que public. Au niveau 
+											du droit privé, nous retenons le droit civil, le droit commercial, le droit pénal, la procédure civile et voies 
+											d’exécution et le droit international privé. Pour le droit public, 
+											nous insistons sur les matières fondamentales telles le droit constitutionnel, le droit objectif et le droit administratif.
+											
+											</p></h5>
+											
+											
+											<h5>Télécharger cursus</h5>
+											<a href="Cursus/UnasmohCursusJuridiques.pdf" download="UnasmohCursusJuridiques.pdf" style="color:blue;" style="background-color:white" class="badge badge-primary badge-pill">Telecharger cursus</a>
+											
+											
+											
+                                        </div>
+                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-1-btn">
+										<i class="fa fa-angle-down"></i>
+									</a>
+                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-11-btn hb-com">
+										<i class="fa fa-angle-up"></i>
+									</a>
+                                    </div>
+                                </div>
+                            </li>
+							
+							
+							
+							
+							
+							  
+							
+							
+							
+							
+							  <li>
+                                <div class="age-eve-com age-eve-1">
+                                    <img src="images/icon/awa/2.png" alt="">
+                                </div>
+                                <div class="s17-eve-time">
+                                    <div class="s17-eve-time-tim">
+                                        
+                                    </div>
+                                    <div class="s17-eve-time-msg">
+                                        <h4>FASPI (Facultés des sciences pures et informatiques)</h4>
+										</br>
+										
+                                        <div class="time-hide time-hide-1">
+										<h5><u>Option</u></h5>
+										</br>
+                                       <h5> 1) Sciences informatiques.</p></h5>
+											<p style="text-align:justify"> 
+											A travers ce programme de licence, l’UNASMOH offre une solide formation en conception, montage et gestion des systèmes informatiques pour 
+											tout type de structures organisationnelles. En fin de cycle, les étudiants acquièrent les aptitudes requises pour analyser les problèmes
+											complexes en vue de formuler une solution informatique adaptée. Les diplômés possèdent aussi 
+											les compétences nécessaires pour évaluer les systèmes d'information et pour donner un avis professionnel pertinent.
+											
+											
+											</p></h5>
+											
+											
+											<h5>Télécharger cursus</h5>
+											<a href="Cursus/UnasmohInfo.pdf" download="UnasmohInfo.pdf" style="color:blue;" style="background-color:white" class="badge badge-primary badge-pill">Telecharger cursus</a>
+											
+											
+											
+                                        </div>
+                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-1-btn">
+										<i class="fa fa-angle-down"></i>
+									</a>
+                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-11-btn hb-com">
+										<i class="fa fa-angle-up"></i>
+									</a>
+                                    </div>
+                                </div>
+                            </li>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+                              <li>
+                                <div class="age-eve-com age-eve-1">
+                                    <img src="images/icon/awa/2.png" alt="">
+                                </div>
+                                <div class="s17-eve-time">
+                                    <div class="s17-eve-time-tim">
+                                        
+                                    </div>
+                                    <div class="s17-eve-time-msg">
+                                          <h4>FASS (Faculté des Sciences de la Santé)</h4>
+										</br>
+										
+                                        <div class="time-hide time-hide-1">
+										<h5><u>Options</u></h5>
+										</br>
+                                       <h5> 1)  Sciences Infirmières.</p></h5>
+											<p style="text-align:justify"> 
+											La licence en sciences infirmières permet aux étudiants d’acquérir les compétences requises
+											pour l'exercice d'une pratique professionnelle exemplaire. Cette formation leur procure une
+											polyvalence et une autonomie pour intervenir professionnellement auprès de différentes personnes.
+											Ils sont en mesure de composer avec la complexité des expériences de santé vécues par les personnes, 
+											les familles et la communauté, en collaboration avec les autres professionnels de la santé tout
+											en ayant la capacité d’exercer un raisonnement clinique fondé sur des savoirs théoriques et pratiques.
+											Dès les premiers moments de la formation les étudiants sont exposés à divers contextes de soins dont
+											la chirurgie, la gériatrie, la médecine interne, la pédiatrie ou la périnatalité, la santé mentale, 
+											la santé communautaire, les soins critiques (urgence, soins intensifs, etc…). Entreprendre cette étude
+											à l’UNASMOH, c’est se mettre en situation pour contribuer à l'amélioration de la qualité de vie
+											des patients, de la qualité des soins, des services de santé et du bien-être de la société en général.
+											</p></h5>
+											
+											
+											<h5>Télécharger cursus</h5>
+											<a href="Cursus/UnasmohCursusInfirmieres.pdf" download="UnasmohCursusInfirmieres.pdf" style="color:blue;" style="background-color:white" class="badge badge-primary badge-pill">Telecharger cursus</a>
+											</br>
+											
+											</br>
+                                       <h5> 2)  Biologie Médicale.</p></h5>
+											<p style="text-align:justify"> 
+											Le programme de licence en biologie médicale à l’UNASMOH offre aux étudiants une formation intégrée,
+											à la fois pratique et théorique, dans le vaste domaine des sciences biomédicales. 
+											Ces derniers ont la possibilité d'acquérir des connaissances en anatomie, biochimie,
+											biologie cellulaire et moléculaire, physiologie, immunologie, pharmacologie, microbiologie et
+											génétique. La mise en commun de ces connaissances amène les étudiants à comprendre les mécanismes
+											responsables du fonctionnement normal et des dérèglements pathologiques des grands 
+											systèmes physiologiques et les prépare à relever avec succès les défis qui se posent
+											à la société moderne en matière de santé humaine. Au terme de leur formation, 
+											les diplômés pourront travailler, entre autres, dans les laboratoires de recherche médicale
+											et pharmaceutique, comme représentants ou conseillers scientifiques dans des
+											compagnies pharmaceutiques, dans le domaine de la recherche agroalimentaire 
+											ou encore comme enseignant. La formation prépare aussi les
+											étudiants pour la poursuite d'études de cycles supérieurs dans tous les 
+											secteurs reliés à la biologie médicale.
+											</p></h5>
+											
+											
+											<h5>Télécharger cursus</h5>
+											<a href="Cursus/UnasmohCursusBiologiemedicale.pdf" download="UnasmohCursusBiologiemedicale.pdf" style="color:blue;" style="background-color:white" class="badge badge-primary badge-pill">Telecharger cursus</a>
+											
+											</br>
+												</br>
+                                       <h5> 3)  Médecine.</p></h5>
+											<p style="text-align:justify"> 
+											Le programme de Médecine  à l’UNASMOH offre aux étudiants une formation novatrice,
+											à la fois pratique et théorique, dans le vaste domaine de la santé. 
+											les etudiants pourront  en effet  pratiquer  a la fin de leur cycle d'étude la chirurgie, la gériatrie, la médecine interne,
+											la pédiatrie ou la périnatalité, la santé mentale, 
+											la santé communautaire, les soins critiques (urgence, soins intensifs, etc…). 
+											.La mise en commun de ces connaissances amène les étudiants à comprendre les mécanismes
+											responsables du fonctionnement normal et des dérèglements pathologiques des grands 
+											systèmes physiologiques et les prépare à relever avec succès les défis qui se posent
+											à la société moderne en matière de santé humaine. Au terme de leur formation, 
+											les diplômés pourront travailler, entre autres, dans les hopitaux
+											et centre de santé, comme Docteur ou conseillers dans des
+											compagnies pharmaceutiques, dans le domaine de la recherche agroalimentaire 
+											ou encore comme enseignant. Entreprendre cette étude
+											à l’UNASMOH, c’est se mettre en situation pour contribuer à l'amélioration de la qualité de vie
+											des patients, de la qualité des soins, des services de santé et du bien-être de la société en général.
+											</p></h5>
+											
+											
+											<h5>Télécharger cursus</h5>
+											
+											
+											
+											
+											
+											
+                                        </div>
+                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-1-btn">
+										<i class="fa fa-angle-down"></i>
+									</a>
+                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-11-btn hb-com">
+										<i class="fa fa-angle-up"></i>
+									</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                               <li>
+                                <div class="age-eve-com age-eve-1">
+                                    <img src="images/icon/awa/2.png" alt="">
+                                </div>
+                                <div class="s17-eve-time">
+                                    <div class="s17-eve-time-tim">
+                                        
+                                    </div>
+                                    <div class="s17-eve-time-msg">
+                                        <h4>FAGA (Faculté de Génie et d'Architecture)</h4>
+										</br>
+										
+                                        <div class="time-hide time-hide-1">
+										<h5><u>Options</u></h5>
+										</br>
+                                       <h5> 1) Génie Civil .</p></h5>
+											<p style="text-align:justify"> 
+											Au bout de ses études, l'ingénieur civil formé à l’UNASMOH est capable de mettre à profit tout
+											un ensemble de connaissances scientifiques et technologiques pour participer à de grands projets
+											de conception d’ouvrages soumis à des sollicitations extrêmes. Il possède le savoir et savoir-faire 
+											nécessaires pour les construire, de les gérer, les entretenir et les réparer en prenant en compte 
+											les impacts sociaux, économiques et environnementaux de ses interventions. D’une manière concrète,
+											nos ingénieurs sont en mesure de développer les compétences nécessaires pour concevoir, construire
+											et exploiter des routes,
+											des ponts, des barrages, des édifices d'envergure dans une optique de développement durable.
+											
+											</p></h5>
+											
+											
+											<h5>Télécharger cursus</h5>
+											<a href="Cursus/UnasmohCursusCivil.pdf" download="UnasmohCursusCivil.pdf" style="color:blue;" style="background-color:white" class="badge badge-primary badge-pill">Telecharger cursus</a>
+											
+											</br>
+											</br>
+                                       <h5> 2) Génie Electromécanique .</p></h5>
+											<p style="text-align:justify"> 
+											Le programme de licence en génie électromécanique est conçu en vue de former des 
+											ingénieurs ayant les potentialités de remplir des fonctions très diversifiées.
+											Il leur est fourni des connaissances dans les domaines de l'électricité, 
+											de l'instrumentation et de la mécanique. La formation reçue habilite les 
+											diplômés à concevoir la réalisation et l'analyse des éléments et des systèmes 
+											du milieu industriel. En un mot, nos diplômés sont des spécialistes de conception 
+											et d'exploitation des systèmes électriques et électroniques avec également des grandes 
+											aptitudes pour le travail en équipe et la gestion de projets. Ce cours couvre les champs suivants
+											: l'automatisme et la commande industrielle,
+											les communications, l'énergie électrique, les systèmes ordinés, les microsystèmes et la photonique.
+											
+											</p></h5>
+											
+											
+											<h5>Télécharger cursus</h5>
+											<a href="Cursus/UnasmohCursusElectromeca.pdf" download="UnasmohCursusElectromeca.pdf" style="color:blue;" style="background-color:white" class="badge badge-primary badge-pill">Telecharger cursus</a>
+											
+											
+											
+                                        </div>
+                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-1-btn">
+										<i class="fa fa-angle-down"></i>
+									</a>
+                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-11-btn hb-com">
+										<i class="fa fa-angle-up"></i>
+									</a>
+                                    </div>
+                                </div>
+                            </li>
+							
+							
+							   <li>
+                                <div class="age-eve-com age-eve-1">
+                                    <img src="images/icon/awa/2.png" alt="">
+                                </div>
+                                <div class="s17-eve-time">
+                                    <div class="s17-eve-time-tim">
+                                        
+                                    </div>
+                                    <div class="s17-eve-time-msg">
+                                        <h4>FASAGE (Faculté d'Agronomie et des Sciences Agricoles et Environnementales)</h4>
+										</br>
+										
+                                        <div class="time-hide time-hide-1">
+										<h5><u>Options</u></h5>
+										</br>
+                                       <h5> 1) Phytotechnie.</p></h5>
+											<p style="text-align:justify"> 
+											Ce programme est conçu dans le but de former des cadres de haut niveau capables
+											de contribuer scientifiquement aux productions végétales à des fins alimentaires,
+											ornementales ou industrielles. Les diplômés de cette discipline sont en mesure de
+											participer à l’exploitation rationnelle et ordonnée des sols et des ressources naturelles dans un souci
+											de lutter contre l’insuffisance alimentaire tout en visant le bien-être et la qualité de vie des citoyens.
+											
+											</p></h5>
+											
+											
+											<h5>Télécharger cursus</h5>
+											<a href="Cursus/UnasmohCursusAgro.pdf" download="UnasmohCursusAgro.pdf" style="color:blue;" style="background-color:white" class="badge badge-primary badge-pill">Telecharger cursus</a>
+											</br>
+											</br>
+                                       <h5> 2) Zootechnie.</p></h5>
+											<p style="text-align:justify"> 
+											Ce programme est conçu dans le but de former des agronomes zootechniciens capables de contribuer 
+											scientifiquement
+											à la production animale et produits à des fins alimentaires tout en visant le bien-être et à la 
+											qualité de vie des citoyens. L’étudiant formé à l’UNASMOH dans le cadre de ce programme devient 
+											un professionnel spécialisé en service-conseil, en alimentation, en génétique, en reproduction et
+											en conduite d'élevage à la ferme en vue du bien-être des animaux et de la production d'aliments 
+											sains dans le respect de l'environnement. Il est également habilité dans le développement et 
+											l'application de programmes alimentaires ou de gestion d'élevage, la commercialisation des animaux,
+											de leurs produits et de leurs coproduits, le contrôle de la qualité, la sélection ou l'amélioration
+											génétique, la gestion de projets et de programmes, l'inspection et les vérifications de contrôle,
+											l'application de la réglementation et des politiques agricoles, 
+											le transfert technologique, la vulgarisation de l'information, la vente et la représentation.
+											</p></h5>
+											
+											
+											<h5>Télécharger cursus</h5>
+											
+											
+                                        </div>
+                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-1-btn">
+										<i class="fa fa-angle-down"></i>
+									</a>
+                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-11-btn hb-com">
+										<i class="fa fa-angle-up"></i>
+									</a>
+                                    </div>
+                                </div>
+                            </li>
+							   <li>
+                                <div class="age-eve-com age-eve-1">
+                                    <img src="images/icon/awa/2.png" alt="">
+                                </div>
+                                <div class="s17-eve-time">
+                                    <div class="s17-eve-time-tim">
+                                        
+                                    </div>
+                                    <div class="s17-eve-time-msg">
+                                        <h4>Programe de maitrise : FAETAS (Faculté des Études Avancées et Spécialisées) </h4>
+										</br>
+										
+                                        <div class="time-hide time-hide-1">
+										
+											<p style="text-align:justify"> 
+											La crise haïtienne actuelle, dans sa complexité impose aux Cadres 
+											d'être des leaders capables de développer toutes leurs compétences 
+											et leur savoir-faire pour inspirer positivement en transformant les 
+											menaces en opportunités. En ce sens, le Conseil d'Administration 
+											de I'UNASMOH, de concert avec les universités nord-américaines partenaires,
+											a mis sur pied, à travers la Faculté des Études Avancées et Spécialisées (FAETAS) tout un ensemble
+											de programmes de maitrise deuxième cycle en deux ans, répondant aux exigences et aux besoins de formation de cette classe de leaders.
+											
+											</p></h5>
+											
+											
+											<h5>LES PROGRAMMES OFFERTS :</h5>
+											 Maitrise en Leadership et Management des Organisations (MLMO) </br>
+ Maitrise en Comptabilité, Contrôle d'Audit (MCCA) </br>
+ Maitrise en Leadership de l'Éducation (MLE) </br> 
+ Maitrise en Leadership entrepreneurial (MLGPE)</br>
+ 
+ Maitrise en Leadership et Gestion Financière (MLGF) </br>
+ Maitrise en Gestion Stratégique des Ressources Humaines.
+
+											
+											
+                                        </div>
+                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-1-btn">
+										<i class="fa fa-angle-down"></i>
+									</a>
+                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-11-btn hb-com">
+										<i class="fa fa-angle-up"></i>
+									</a>
+                                    </div>
+                                </div>
+                            </li>
+							
+							
+							
+                        </ul>
+                    </div>
+                    <div class="ed-about-sec1">
+                        <div class="col-md-6"></div>
+                        <div class="col-md-6"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FIN DE SECTION -->
+
+
+    <!--DEBUT SECTION -->
+  
+    <!-- FIN DE SECTION -->
+
+   
+    <!--SECTION ENTETE-->
+     <section class="wed-hom-footer">
+        <div class="container">
+           
+            <div class="row wed-foot-link">
+                <div class="col-md-4 foot-tc-mar-t-o">
+                   
+                    <ul>
+                      <h4>Informations utiles</h4>
+                    <ul>	
+                    <p>Adresse: # 4,Rue Marcelin,Delmas65 / 16 ,Avenue Christophe Rue 4</p>
+                    <p>Phone: <a >+(509) 3664-0716 / 3622-3235 / 40132239</a></p>
+                    <p>Email: <a >unasmoh@edu.com</a></p>
+                        <li><a href="COURSe-details.html"> </a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    
+                    <ul>
+                      <h4>AIDE & SUPPORT</h4>
+                    <ul>
+                       
+					   
+                        <li><a href="contact.html">CONTACTEZ-NOUS</a> </br>
+                        <a href="faq.html">FAQs</a>
+                    </ul>
+                </div>
+		 <div class="col-md-4 foot-tc-mar-t-o">
+				 <h4> Reseau sociaux</h4>
+				  <ul>
+				  <li>
+                       <a href="https://mobile.facebook.com/pages/category/Community-College/Unasmoh-228275027292471/?locale2=fr_FR&_rdc=1&_rdr"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </br>
+                       <a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                           </br>
+                        
+                       <a href="https://youtube.com/"><i class="fa fa-youtube" aria-hidden="true"></i></a></li></br></br></br>
+					  
+                       
+
+                       
+                    </ul>
+				 
+				
+                </div>
+               
+            </div>
+            <div class="col-md-4">
+			<p>© 2021 Tous drois Réservés UNASMOH</p></div>
+        </div>
+    </section>
+      <!-- FIN DE SECTION ENTETE -->
+
+    <section>
+       
+		
+        <div id="modal1" class="modal fade" role="dialog">
+            <div class="log-in-pop">
+                <div class="log-in-pop-left">
+                    <h1>Bonjour...</h1>
+                    <p>N'avez-vous pas de compte? Pour créer un compte rendez-vous a la direction pour reclamer votre code.</p>
+                    <h4>Se connecter avec facebook</h4>
+                    <ul>
+                        <li><a href="https://mobile.facebook.com/pages/category/Community-College/Unasmoh-228275027292471/?locale2=fr_FR&_rdc=1&_rdr"><i class="fa fa-facebook"></i> Facebook</a>
+                        </li>
+                      
+                        </li>
+                    </ul>
+                </div>
+                <div class="log-in-pop-right">
+                    <a href="#" class="pop-close" data-dismiss="modal"><img src="images/cancel.png" alt="" />
+                    </a>
+                    <h4>Connexion</h4>
+                    <p>N'avez-vous pas de compte? Pour créer un compte rendez-vous a la direction pour reclamer votre code.</p>
+					<form method="post" action=""  class="form">
+                    <form class="s12">
+                        <div>
+                            <div class="input-field s12">
+                                    <input type="text" data-ng-model="name" class="validate" name="email">
+                                <label>Code de connexion</label>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="s12 log-ch-bx">
+                                <p>
+                                    <input type="checkbox" id="test5" />
+                                    <label for="test5">Remember me</label>
+                                </p>
+                            </div>
+                        </div></br>
+                      <div class="field2">
+            <input type="submit"  name="btnconecter" value="LOGIN" class="waves-effect waves-light log-in-btn" >
+          </div>
+                        <div>
+                            <div class="input-field s12"> <a >NB: Si vous avez oublié votre code étudiant veuillez le reclamer a nouveau a la sécrétariat.</a>  </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+       
+       </form>
+    </section>
+
+    <section>
+        <div class="icon-float">
+            <ul>
+                <li><a href="#" class="sh">1k <br> Share</a> </li>
+                <li><a href="#" class="fb1"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                <li><a href="#" class="gp1"><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
+                <li><a href="#" class="tw1"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+                <li><a href="#" class="li1"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
+                <li><a href="#" class="wa1"><i class="fa fa-whatsapp" aria-hidden="true"></i></a> </li>
+                <li><a href="#" class="sh1"><i class="fa fa-envelope-o" aria-hidden="true"></i></a> </li>
+            </ul>
+        </div>
+    </section>
+
+    <!--Importation des requestes de materialize.js-->
+    <script src="js/main.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+
+</html>
