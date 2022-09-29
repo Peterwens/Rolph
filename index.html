@@ -220,6 +220,48 @@ font-size: 18px;
 #haut:hover {
 background-color: #ddd;
 }
+	
+	
+	
+#button {
+background-color: skyblue;
+color: blue;
+border: 0;
+font-size:3em;
+cursor:pointer
+position:relative
+padding: 20px 50px;
+transition: all .25s;
+
+
+}
+
+#button::after,button::before{
+border: 3px solid #fff;
+
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+transition: all .25s
+}
+#button:hover::after {
+transform: translate(-5px,5px);
+}
+
+#button:hover::before {
+transform: translate(-5px,-5px);
+}
+
+	
+	
+	
+	
+	
+	
+	
+	
 </style>
 
 <div style>
@@ -854,7 +896,7 @@ document.documentElement.scrollTop = 0;
             <div class="row">
                 <div class="col-md-4">
                     <div class="bot-gal h-gal ho-event-mob-bot-sp">
-                       <h4><li><a href="gallery-photo.html"  style="color:blue;">Galléries Photo</a></li></h4>
+                       <button id="button" ><li><a href="gallery-photo.html" style="color:black;font-size:20px;" >Gallérie Photo</a></li> </button> </br></br>
                         <ul>
                      
                             </li>
@@ -883,7 +925,7 @@ document.documentElement.scrollTop = 0;
                 </div>
                 <div class="col-md-4">
                     <div class="bot-gal h-vid ho-event-mob-bot-sp">
-                        <h4><li><a href="gallery-video.html"style="color:blue;">Galléries Video</a></li></h4>
+                         <button id="button" ><li><a href="gallery-video.html" style="color:black;font-size:20px;">Gallérie Video</a></li></button></br>
                         <iframe src="https://www.youtube.com/embed/9BPWcxJArII?autoplay=0&amp;showinfo=0&amp;controls=0" allowfullscreen></iframe>
 						
 					
@@ -898,7 +940,7 @@ document.documentElement.scrollTop = 0;
                 </div>
                 <div class="col-md-4">
                     <div class="bot-gal h-Cinfoca ho-event">
-                       <h4><li><a href="events.html" style="color:blue;">Evènement</a></li></h4>
+                       <button id="button" ><li><a href="events.html" style="color:black;font-size:20px;">Evènement</a></li></button></br>
                         <div class="ho-event">
                             <ul>
                                 <li>
