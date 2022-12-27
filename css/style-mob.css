@@ -1,5 +1,5 @@
 
- 
+
 /*-------------------------------------------------------*/
 /* When the browser is between 0px and 1300px wide,below css will be applied.
 /*-------------------------------------------------------*/
@@ -148,13 +148,16 @@
          padding-bottom: 30px;
     }
      .slider-con h2{
-         font-size:32px;
+         font-size:36px;
+	 font-family: "Baskerville Old Face";
     }
      .slider-con h2 span{
-         font-size:32px;
+         font-size:36px;
+	 font-family: "Baskerville Old Face";
     }
      .slider-con p{
-         font-size:16px;
+         font-size:24px;
+	     
     }
      .ed-advan ul li{
          width: 100%;
@@ -367,13 +370,15 @@
          padding-bottom: 30px;
     }
      .slider-con h2{
-         font-size:32px;
+         font-size:36px;
+	 font-family: "Baskerville Old Face";
     }
      .slider-con h2 span{
-         font-size:32px;
+         font-size:36px;
+	 font-family: "Baskerville Old Face";
     }
      .slider-con p{
-         font-size:16px;
+         font-size:24px;
     }
      .slider-con p{
          margin-top:25px;
@@ -440,15 +445,17 @@
     }
      .slider-con h2{
          font-size:24px;
-         line-height: 24px 
+         line-height: 24px;
+	font-family: "Baskerville Old Face";
     }
      .slider-con h2 span{
          font-size:24px;
-         line-height: 24px 
+         line-height:24px;
+	font-family: "Baskerville Old Face";
     }
      .slider-con p{
          margin-top: 0px;
-         font-size: 12px;
+         font-size: 15px;
          line-height: 16px;
     }
      .slider-con a{
@@ -506,14 +513,16 @@
          padding-bottom: 30px;
     }
      .slider-con h2{
-         font-size:24px;
+         font-size:27px;
          margin-top:10px;
+	 font-family: "Baskerville Old Face";
     }
      .slider-con h2 span{
-         font-size:24px;
+         font-size:27px;
+	 font-family: "Baskerville Old Face";
     }
      .slider-con p{
-         font-size:16px;
+         font-size:18px;
     }
      .slider-con p{
          margin-top:10px;
